@@ -1,4 +1,5 @@
 import 'package:erozgaar/screens/login_screen.dart';
+import 'package:erozgaar/screens/signup_screen.dart';
 import 'package:flutter/material.dart';
 
 class StartScreen extends StatefulWidget {
@@ -61,30 +62,42 @@ class _StartScreenState extends State<StartScreen> {
                     height: MediaQuery.of(context).size.height * 0.06,
                     width: MediaQuery.of(context).size.width * 0.9,
                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(25),
-                        color: const Color(0Xff3FBC46)),
+                      borderRadius: BorderRadius.circular(25),
+                      color: const Color(0Xff3FBC46),
+                    ),
                     child: Center(
                       child: Text(
                         'LOGIN',
-                        style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white),
+                        style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
                       ),
                     ),
                   ),
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.04),
-                Container(
-                  height: MediaQuery.of(context).size.height * 0.06,
-                  width: MediaQuery.of(context).size.width * 0.9,
-                  child: OutlinedButton(
-                    onPressed: () {},
-                    child: const Text(
-                      'Create an Account',
-                      style: TextStyle(fontSize: 16, color: Colors.white),
+                GestureDetector(
+                  onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const SignUpScreen(),
                     ),
-                    style: OutlinedButton.styleFrom(
-                      side: const BorderSide(color: Colors.white, width: 1),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(25.0),
+                  ),
+                  child: Container(
+                    height: MediaQuery.of(context).size.height * 0.06,
+                    width: MediaQuery.of(context).size.width * 0.9,
+                    child: OutlinedButton(
+                      onPressed: () {},
+                      child: const Text(
+                        'Create an Account',
+                        style: TextStyle(fontSize: 16, color: Colors.white),
+                      ),
+                      style: OutlinedButton.styleFrom(
+                        side: const BorderSide(color: Colors.white, width: 1),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(25.0),
+                        ),
                       ),
                     ),
                   ),
