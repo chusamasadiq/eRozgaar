@@ -34,7 +34,6 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Center(
         child: Image.asset(
           'assets/images/e-rozgaar-logo.png',
-         // image: AssetImage('assets/images/e-rozgaar-logo.png'),
           height: MediaQuery.of(context).size.height * 0.2,
             width:  MediaQuery.of(context).size.height * 0.2,
         ),
