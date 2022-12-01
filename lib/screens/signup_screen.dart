@@ -33,16 +33,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 Container(
                   height: MediaQuery.of(context).size.height * 0.61,
                   width: MediaQuery.of(context).size.width,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(topRight: Radius.circular(40), topLeft: Radius.circular(40)
                     ),
                   ),
                   child: Padding(
-                    padding: EdgeInsets.fromLTRB(20, 30, 20, 0),
+                    padding: const EdgeInsets.fromLTRB(20, 30, 20, 0),
                     child: Column(
                       children: [
-                        Text(
+                        const Text(
                           'Registration Portal',
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
@@ -63,7 +63,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                               filled: true,
                               focusedBorder: OutlineInputBorder(
                                   borderSide:
-                                      BorderSide(color: Color(0xffe4e7eb)),
+                                      const BorderSide(color: Color(0xffe4e7eb)),
                                   borderRadius: BorderRadius.circular(10)),
                               enabledBorder: OutlineInputBorder(
                                   borderSide:
