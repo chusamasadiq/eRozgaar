@@ -70,7 +70,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                       BorderSide(color: Color(0xffe4e7eb)),
                                   borderRadius: BorderRadius.circular(10)),
                               errorBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.red),
+                                  borderSide: BorderSide(color: Colors.green),
                                   borderRadius: BorderRadius.circular(10))),
                         ),
                         SizedBox(
