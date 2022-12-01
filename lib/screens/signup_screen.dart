@@ -31,10 +31,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   height: MediaQuery.of(context).size.height * 0.1,
                 ),
                 Container(
-                  height: MediaQuery.of(context).size.height * 0.6,
+                  height: MediaQuery.of(context).size.height * 0.61,
+                  width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
                     color: Colors.white,
-                    borderRadius: BorderRadius.circular(40),
+                    borderRadius: BorderRadius.only(topRight: Radius.circular(40), topLeft: Radius.circular(40)
+                    ),
                   ),
                   child: Padding(
                     padding: EdgeInsets.fromLTRB(20, 30, 20, 0),
