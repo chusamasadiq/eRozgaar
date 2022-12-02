@@ -1,43 +1,41 @@
 import 'package:flutter/material.dart';
 
-class Courses extends StatefulWidget {
+class Courses extends StatelessWidget {
   final image;
   String title;
 
   Courses({required this.image, required this.title});
 
   @override
-  State<Courses> createState() => _CoursesState();
-}
-
-class _CoursesState extends State<Courses> {
-  @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(5),
-      child: Container(
-        width: 150,
-        child: Column(
-          children: [
-            Expanded(
-              child: AspectRatio(
-                aspectRatio: 4 / 3,
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(12),
-                  child: Image.asset(widget.image, fit: BoxFit.cover),
+      padding: const EdgeInsets.symmetric(horizontal: 5),
+      child: Column(
+        children: [
+          Expanded(
+            child: Container(
+              width: MediaQuery.of(context).size.width * 0.5,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(color: Colors.white),
+                image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: AssetImage(image),
                 ),
               ),
             ),
-            SizedBox(height: 5),
-            Text(
-              widget.title,
-              style: TextStyle(
-                color: Colors.grey,
-                fontWeight: FontWeight.bold,
-              ),
+          ),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.01),
+          Text(
+            title,
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
             ),
-          ],
-        ),
+            textAlign: TextAlign.center,
+
+          ),
+        ],
       ),
     );
   }
