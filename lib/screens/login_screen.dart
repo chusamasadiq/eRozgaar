@@ -1,3 +1,5 @@
+import 'package:erozgaar/screens/home_screen.dart';
+import 'package:erozgaar/screens/homefeed_screen.dart';
 import 'package:erozgaar/screens/signup_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -23,15 +25,14 @@ class _LoginScreenState extends State<LoginScreen> {
                   height: MediaQuery.of(context).size.height * 0.1,
                 ),
                 Image(
-                  height: MediaQuery.of(context).size.height * 0.15,
-                  width: MediaQuery.of(context).size.height * 0.15,
+                  height: MediaQuery.of(context).size.height * 0.08,
                   image: AssetImage('assets/images/e-rozgaar-logo.png'),
                 ),
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.1,
                 ),
                 Container(
-                  height: MediaQuery.of(context).size.height * 0.61,
+                  height: MediaQuery.of(context).size.height * 0.68,
                   width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
                     color: Colors.white,
@@ -128,7 +129,12 @@ class _LoginScreenState extends State<LoginScreen> {
                           height: MediaQuery.of(context).size.height * 0.05,
                         ),
                         GestureDetector(
-                          onTap: () => print('Usama'),
+                          onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => HomeFeedSceen(),
+                            ),
+                          ),
                           child: Container(
                             height: MediaQuery.of(context).size.height * 0.06,
                             width: MediaQuery.of(context).size.width * 0.9,

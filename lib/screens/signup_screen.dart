@@ -23,15 +23,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   height: MediaQuery.of(context).size.height * 0.1,
                 ),
                 Image(
-                  height: MediaQuery.of(context).size.height * 0.15,
-                  width: MediaQuery.of(context).size.height * 0.15,
+                  height: MediaQuery.of(context).size.height * 0.08,
                   image: AssetImage('assets/images/e-rozgaar-logo.png'),
                 ),
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.1,
                 ),
                 Container(
-                  height: MediaQuery.of(context).size.height * 0.61,
+                  height: MediaQuery.of(context).size.height * 0.68,
                   width: MediaQuery.of(context).size.width,
                   decoration: const BoxDecoration(
                     color: Colors.white,

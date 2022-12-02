@@ -20,8 +20,7 @@ class _StartScreenState extends State<StartScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image(
-                height: MediaQuery.of(context).size.height * 0.15,
-                width: MediaQuery.of(context).size.height * 0.15,
+                height: MediaQuery.of(context).size.height * 0.08,
                 image: AssetImage('assets/images/e-rozgaar-logo.png'),
               ),
               SizedBox(
