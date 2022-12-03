@@ -4,6 +4,10 @@
         android:label="erozgaar"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+
+       <meta-data android:name="com.google.android.geo.API_KEY"
+           android:value="AIzaSyCFt2E-FGr2Xk7N9t_sgyuyxmAcfpF5-0U"/>
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
