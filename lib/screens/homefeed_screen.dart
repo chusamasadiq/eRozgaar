@@ -1,13 +1,16 @@
+import 'package:erozgaar/screens/document_screen.dart';
+import 'package:erozgaar/screens/courses_screen.dart';
 import 'package:erozgaar/screens/home_screen.dart';
+import 'package:erozgaar/screens/profile_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class HomeFeedSceen extends StatefulWidget {
+class HomeFeedScreen extends StatefulWidget {
   @override
-  _HomeFeedSceenState createState() => _HomeFeedSceenState();
+  _HomeFeedScreenState createState() => _HomeFeedScreenState();
 }
 
-class _HomeFeedSceenState extends State<HomeFeedSceen> {
+class _HomeFeedScreenState extends State<HomeFeedScreen> {
   // Properties & Variables needed
 
   int currentTab = 0; // to keep track of active tab index
@@ -43,32 +46,32 @@ class _HomeFeedSceenState extends State<HomeFeedSceen> {
         shape: const CircularNotchedRectangle(),
         notchMargin: 10,
         child: Container(
-          height: 60,
+          height: MediaQuery.of(context).size.height * 0.07,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   MaterialButton(
-                    minWidth: 60,
+                    //minWidth: 60,
                     onPressed: () {
                       setState(() {
-                        // currentScreen =
-                        //     Menu(); // if user taps on this dashboard tab will be active
-                        // currentTab = 1;
+                        currentScreen =
+                            CourseScreen(); // if user taps on this dashboard tab will be active
+                        currentTab = 1;
                       });
                     },
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Icon(
-                          Icons.dashboard,
+                          Icons.app_registration,
                           color: currentTab == 1 ? Color(0Xff3FBC46) : Color(0xff323F4B),
                         ),
                         Text(
-                          'Menu',
+                          'Courses',
                           style: TextStyle(
+                            fontSize: 10,
                             color: currentTab == 1 ? Color(0Xff3FBC46) : Color(0xff323F4B),
                           ),
                         ),
@@ -76,12 +79,12 @@ class _HomeFeedSceenState extends State<HomeFeedSceen> {
                     ),
                   ),
                   MaterialButton(
-                    minWidth: 40,
+                    //minWidth: 40,
                     onPressed: () {
                       setState(() {
-                        // currentScreen =
-                        // const Voucher(); // if user taps on this Voucher tab will be active
-                        // currentTab = 2;
+                        currentScreen =
+                        const DocumentScreen(); // if user taps on this Voucher tab will be active
+                        currentTab = 2;
                       });
                     },
                     child: Column(
@@ -92,8 +95,9 @@ class _HomeFeedSceenState extends State<HomeFeedSceen> {
                           color: currentTab == 2 ? Color(0Xff3FBC46) : Color(0xff323F4B),
                         ),
                         Text(
-                          'Voucher',
+                          'Documents',
                           style: TextStyle(
+                            fontSize: 10,
                             color: currentTab == 2 ? Color(0Xff3FBC46) : Color(0xff323F4B),
                           ),
                         ),
@@ -109,7 +113,7 @@ class _HomeFeedSceenState extends State<HomeFeedSceen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   MaterialButton(
-                    minWidth: 40,
+                    //minWidth: 20,
                     onPressed: () {
                       setState(() {
                         // currentScreen =
@@ -121,12 +125,13 @@ class _HomeFeedSceenState extends State<HomeFeedSceen> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Icon(
-                          Icons.location_searching,
+                          Icons.location_on_sharp,
                           color: currentTab == 3 ? Color(0Xff3FBC46) : Color(0xff323F4B),
                         ),
                         Text(
                           'Location',
                           style: TextStyle(
+                            fontSize: 10,
                             color: currentTab == 3 ? Color(0Xff3FBC46) : Color(0xff323F4B),
                           ),
                         ),
@@ -134,12 +139,12 @@ class _HomeFeedSceenState extends State<HomeFeedSceen> {
                     ),
                   ),
                   MaterialButton(
-                    minWidth: 40,
+                    //minWidth: 20,
                     onPressed: () {
                       setState(() {
-                        // currentScreen =
-                        // const Profile(); // if user taps on this Profile tab will be active
-                        // currentTab = 4;
+                        currentScreen =
+                        const ProfileScreen(); // if user taps on this Profile tab will be active
+                        currentTab = 4;
                       });
                     },
                     child: Column(
@@ -152,7 +157,8 @@ class _HomeFeedSceenState extends State<HomeFeedSceen> {
                         Text(
                           'Profile',
                           style: TextStyle(
-                            color: currentTab == 4 ? Colors.orange : Color(0xff323F4B),
+                            fontSize: 10,
+                            color: currentTab == 4 ? Color(0Xff3FBC46) : Color(0xff323F4B),
                           ),
                         ),
                       ],
