@@ -1,6 +1,7 @@
 import 'package:erozgaar/screens/document_screen.dart';
 import 'package:erozgaar/screens/courses_screen.dart';
 import 'package:erozgaar/screens/home_screen.dart';
+import 'package:erozgaar/screens/location_screen.dart';
 import 'package:erozgaar/screens/profile_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -57,7 +58,7 @@ class _HomeFeedScreenState extends State<HomeFeedScreen> {
                     onPressed: () {
                       setState(() {
                         currentScreen =
-                            CourseScreen(); // if user taps on this dashboard tab will be active
+                            CourseScreen(); // if user taps on this Course tab will be active
                         currentTab = 1;
                       });
                     },
@@ -83,7 +84,7 @@ class _HomeFeedScreenState extends State<HomeFeedScreen> {
                     onPressed: () {
                       setState(() {
                         currentScreen =
-                        const DocumentScreen(); // if user taps on this Voucher tab will be active
+                        const DocumentScreen(); // if user taps on this Document tab will be active
                         currentTab = 2;
                       });
                     },
@@ -116,9 +117,9 @@ class _HomeFeedScreenState extends State<HomeFeedScreen> {
                     //minWidth: 20,
                     onPressed: () {
                       setState(() {
-                        // currentScreen =
-                        // const Location(); // if user taps on this Location tab will be active
-                        // currentTab = 3;
+                        currentScreen =
+                        const LocationScreen(); // if user taps on this Location tab will be active
+                        currentTab = 3;
                       });
                     },
                     child: Column(
