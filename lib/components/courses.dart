@@ -33,7 +33,6 @@ class Courses extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
             textAlign: TextAlign.center,
-
           ),
         ],
       ),

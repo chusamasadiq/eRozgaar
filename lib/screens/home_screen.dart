@@ -1,4 +1,5 @@
 import 'package:erozgaar/components/courses.dart';
+import 'package:erozgaar/screens/courses_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -139,19 +140,31 @@ class _HomeScreenState extends State<HomeScreen> {
                       Image.asset('assets/images/admission.png'),
                       SizedBox(
                           height: MediaQuery.of(context).size.height * 0.03),
-                      Container(
-                        height: MediaQuery.of(context).size.height * 0.05,
-                        width: MediaQuery.of(context).size.width * 0.35,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(25),
-                          color: Color(0Xffc73236),
-                        ),
-                        child: Center(
-                          child: Text(
-                            'Apply Now',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold),
+                      GestureDetector(
+                        onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context)=> CourseScreen())),
+                        child: Container(
+                          height: MediaQuery.of(context).size.height * 0.05,
+                          width: MediaQuery.of(context).size.width * 0.35,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(25),
+                            color: Color(0Xffc73236),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey.withOpacity(0.5),
+                                spreadRadius: 1,
+                                blurRadius: 5,
+                                offset: const Offset(0, 2),
+                              ),
+                              // changes position of shadow
+                            ],
+                          ),
+                          child: Center(
+                            child: Text(
+                              'Apply Now',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
+                            ),
                           ),
                         ),
                       ),
