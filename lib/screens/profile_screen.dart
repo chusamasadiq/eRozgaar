@@ -78,7 +78,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           onPressed: () => 'Null',
                           style: ButtonStyle(
                               backgroundColor:
-                                  MaterialStateProperty.all(Colors.green)),
+                                  MaterialStateProperty.all(Color(0Xff3FBC46))),
                           child: Padding(
                             padding: const EdgeInsets.all(4),
                             child: Row(

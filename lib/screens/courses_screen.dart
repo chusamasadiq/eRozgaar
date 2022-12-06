@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../components/card.dart';
+import 'instructions_screen.dart';
 
 class CourseScreen extends StatefulWidget {
   const CourseScreen({Key? key}) : super(key: key);
@@ -20,8 +21,8 @@ class _CourseScreenState extends State<CourseScreen> {
           content: SingleChildScrollView(
             child: ListBody(
               children: <Widget>[
-                Text('In order to complete the registration process for Erozgaar Program. Kindly complete the online test within 72 hrs after '
-                    'submitting Online Registration Form In case of delay your application will be rejected.'),
+                Text('In order to complete the registration process for Erozgaar Program. Kindly complete the online test within 72 hrs after'
+                    'submitting Online Registration Form In case of delay your application will be rejected.',style:  TextStyle(color: Color(0Xffc73236)),textAlign: TextAlign.justify,),
               ],
             ),
           ),
@@ -35,7 +36,7 @@ class _CourseScreenState extends State<CourseScreen> {
             TextButton(
               child: const Text('Start Exam Now', style:  TextStyle(fontWeight: FontWeight.bold, color: Color(0Xff3FBC46)),),
               onPressed: () {
-                Navigator.of(context).pop();
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> const InstructionScreen()));
               },
             ),
           ],
