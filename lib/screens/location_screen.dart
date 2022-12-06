@@ -16,11 +16,12 @@ class _LocationScreenState extends State<LocationScreen> {
   final List<Marker> _marker = [];
   final List<Marker> _list = const [
     Marker(
-        markerId: MarkerId('1'),
-        position: LatLng(30.7222, 72.6447),
-        infoWindow: InfoWindow(
-          title: 'Kamalia, Meri Jaan!',
-        ))
+      markerId: MarkerId('1'),
+      position: LatLng(30.7222, 72.6447),
+      infoWindow: InfoWindow(
+        title: 'Kamalia, Meri Jaan!',
+      ),
+    )
   ];
   static final CameraPosition _kGooglePlex =
       CameraPosition(target: LatLng(30.7222, 72.6447), zoom: 14.4746);

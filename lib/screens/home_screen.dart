@@ -12,7 +12,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff323F4B),
+      backgroundColor: const Color(0xff323F4B),
       body: SingleChildScrollView(
         child: SafeArea(
           child: Column(
@@ -102,7 +102,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               image: ('assets/images/design.jpg'),
                               title: 'UI/UX Design'),
                           Courses(
-                              image: ('assets/images/digtal-marketing.jpg'),
+                              image: ('assets/images/digital-marketing.jpg'),
                               title: 'Digital Media Marketing'),
                           Courses(
                               image: ('assets/images/e-commerce.jpg'),
