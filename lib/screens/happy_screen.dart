@@ -1,3 +1,4 @@
+import 'package:erozgaar/screens/homefeed_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'exam_screen.dart';
@@ -67,7 +68,7 @@ class HappyScreen extends StatelessWidget {
                         onTap: () => Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => ExamScreen(),
+                            builder: (context) => HomeFeedScreen(),
                           ),
                         ),
                         child: Container(
@@ -79,7 +80,7 @@ class HappyScreen extends StatelessWidget {
                           ),
                           child: const Center(
                             child: Text(
-                              'Start Now',
+                              'Back to Home',
                               style: TextStyle(
                                   fontSize: 16,
                                   color: Colors.white,
