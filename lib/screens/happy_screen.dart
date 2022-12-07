@@ -1,8 +1,9 @@
-import 'package:erozgaar/screens/exam_screen.dart';
 import 'package:flutter/material.dart';
 
-class InstructionScreen extends StatelessWidget {
-  const InstructionScreen({Key? key}) : super(key: key);
+import 'exam_screen.dart';
+
+class HappyScreen extends StatelessWidget {
+  const HappyScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -37,12 +38,12 @@ class InstructionScreen extends StatelessWidget {
                   child: Column(
                     //mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Image.asset('assets/images/exam.png', scale: 3),
+                      Image.asset('assets/images/congratulations.png'),
                       SizedBox(
                         height: MediaQuery.of(context).size.height * 0.03,
                       ),
                       const Text(
-                        'You have 30 minutes\nto complete the Exam',
+                        'Congratulations!',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 20,
@@ -50,15 +51,13 @@ class InstructionScreen extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        height: MediaQuery.of(context).size.height * 0.03,
+                        height: MediaQuery.of(context).size.height * 0.01,
                       ),
                       const Text(
-                        'You have three chances to complete this exam.'
-                        ' Please make sure your internet connection and'
-                        ' electricity are backup connected.',
+                        'You have passed the exam.',
                         style: TextStyle(
-                            //fontWeight: FontWeight.bold,
-                            fontSize: 16),
+                          fontWeight: FontWeight.bold,
+                        ),
                         textAlign: TextAlign.center,
                       ),
                       SizedBox(
