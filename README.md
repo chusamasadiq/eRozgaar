@@ -1,4 +1,4 @@
- # e-Rozgaar Mobile Application User Interface
+ # e-Rozgaar Mobile Application UI
 
 ## Steps to configure project on your system
 1. Download project 
