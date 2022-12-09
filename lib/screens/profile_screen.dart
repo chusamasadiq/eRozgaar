@@ -130,11 +130,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text('33302-4001661-5'),
+                                Text('XXXXX-4001661-X'),
                                 SizedBox(
                                     height: MediaQuery.of(context).size.height *
                                         0.02),
-                                Text('Dec 1, 1998'),
+                                Text('Nov X, XXXX'),
                                 SizedBox(
                                     height: MediaQuery.of(context).size.height *
                                         0.02),
