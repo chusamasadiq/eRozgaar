@@ -59,7 +59,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           height: MediaQuery.of(context).size.height * 0.03,
                         ),
                         TextFieldWidget(
-                          hintText: 'Passwordd',
+                          hintText: 'Password',
                           preIcon: Icons.lock_open,
                           controller: passwordController,
                           obscure: true,
