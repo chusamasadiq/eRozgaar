@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../components/identity.dart';
+
 class DocumentScreen extends StatefulWidget {
   const DocumentScreen({Key? key}) : super(key: key);
 
@@ -20,10 +22,7 @@ class _DocumentScreenState extends State<DocumentScreen> {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.034,
               ),
-              Image(
-                height: MediaQuery.of(context).size.height * 0.08,
-                image: AssetImage('assets/images/e-rozgaar-logo.png'),
-              ),
+              IdentityLogo(),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.1,
               ),

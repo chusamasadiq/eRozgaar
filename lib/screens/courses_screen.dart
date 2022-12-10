@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../components/card.dart';
+import '../components/identity.dart';
 import 'instructions_screen.dart';
 
 class CourseScreen extends StatefulWidget {
@@ -89,11 +90,7 @@ class _CourseScreenState extends State<CourseScreen> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Image(
-                        height: MediaQuery.of(context).size.height * 0.08,
-                        image: const AssetImage(
-                            'assets/images/e-rozgaar-logo.png'),
-                      ),
+                      IdentityLogo(),
                       SizedBox(
                         height: MediaQuery.of(context).size.height * 0.02,
                       ),

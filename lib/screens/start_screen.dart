@@ -1,3 +1,4 @@
+import 'package:erozgaar/components/identity.dart';
 import 'package:erozgaar/screens/login_screen.dart';
 import 'package:erozgaar/screens/signup_screen.dart';
 import 'package:flutter/material.dart';
@@ -20,10 +21,7 @@ class _StartScreenState extends State<StartScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image(
-                height: MediaQuery.of(context).size.height * 0.08,
-                image: const AssetImage('assets/images/e-rozgaar-logo.png'),
-              ),
+              IdentityLogo(),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.15,
               ),
@@ -58,34 +56,13 @@ class _StartScreenState extends State<StartScreen> {
                 width: 0.9,
                 color: const Color(0Xff3FBC46),
                 title: 'LOGIN',
-               onClick: () => Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginScreen())),
+                onClick: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => LoginScreen(),
                   ),
-
-              // GestureDetector(
-              //   onTap: () => Navigator.push(
-              //     context,
-              //     MaterialPageRoute(
-              //       builder: (context) => const LoginScreen(),
-              //     ),
-              //   ),
-              //   child: Container(
-              //     height: MediaQuery.of(context).size.height * 0.06,
-              //     width: MediaQuery.of(context).size.width * 0.9,
-              //     decoration: BoxDecoration(
-              //       borderRadius: BorderRadius.circular(25),
-              //       color: const Color(0Xff3FBC46),
-              //     ),
-              //     child: Center(
-              //       child: Text(
-              //         'LOGIN',
-              //         style: TextStyle(
-              //             fontSize: 16,
-              //             fontWeight: FontWeight.bold,
-              //             color: Colors.white),
-              //       ),
-              //     ),
-              //   ),
-              // ),
+                ),
+              ),
               SizedBox(height: MediaQuery.of(context).size.height * 0.04),
               Container(
                 height: MediaQuery.of(context).size.height * 0.06,

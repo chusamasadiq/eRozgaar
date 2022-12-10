@@ -2,6 +2,8 @@ import 'package:erozgaar/components/courses.dart';
 import 'package:erozgaar/screens/courses_screen.dart';
 import 'package:flutter/material.dart';
 
+import '../components/identity.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -23,11 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     top: 30, left: 12, right: 12, bottom: 20),
                 child: Column(
                   children: [
-                    Image(
-                      height: MediaQuery.of(context).size.height * 0.08,
-                      image:
-                          const AssetImage('assets/images/e-rozgaar-logo.png'),
-                    ),
+                    IdentityLogo(),
                     SizedBox(height: MediaQuery.of(context).size.width * 0.05),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -147,7 +145,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           width: MediaQuery.of(context).size.width * 0.35,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(25),
-                            color: Color(0Xffc73236),
+                            color: const Color(0Xffc73236),
                             boxShadow: [
                               BoxShadow(
                                 color: Colors.grey.withOpacity(0.5),

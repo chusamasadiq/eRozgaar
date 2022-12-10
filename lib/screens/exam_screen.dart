@@ -1,6 +1,8 @@
 import 'package:erozgaar/screens/happy_screen.dart';
 import 'package:flutter/material.dart';
 
+import '../components/button.dart';
+
 class ExamScreen extends StatefulWidget {
   const ExamScreen({Key? key}) : super(key: key);
 
@@ -125,28 +127,15 @@ class _ExamScreenState extends State<ExamScreen> {
                         ),
                       ),
                       SizedBox(height: MediaQuery.of(context).size.height * 0.03),
-                      GestureDetector(
-                        onTap: ()=> Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => HappyScreen(),
-                        ),
-                      ),
-                        child: Container(
-                          height: MediaQuery.of(context).size.height * 0.06,
-                          width: MediaQuery.of(context).size.width * 0.9,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(25),
-                            color: const Color(0Xff3FBC46),
-                          ),
-                          child: const Center(
-                            child: Text(
-                              'Submit Answer',
-                              style: TextStyle(
-                                  fontSize: 16,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold),
-                            ),
+                      ButtonWidget(
+                        height: 0.06,
+                        width: 0.9,
+                        color: const Color(0Xff3FBC46),
+                        title: 'Submit Answer',
+                        onClick: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => HappyScreen(),
                           ),
                         ),
                       ),

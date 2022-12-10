@@ -1,7 +1,9 @@
-import 'package:erozgaar/screens/home_screen.dart';
 import 'package:erozgaar/screens/homefeed_screen.dart';
 import 'package:erozgaar/screens/signup_screen.dart';
 import 'package:flutter/material.dart';
+
+import '../components/button.dart';
+import '../components/identity.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -24,10 +26,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.1,
                 ),
-                Image(
-                  height: MediaQuery.of(context).size.height * 0.08,
-                  image: AssetImage('assets/images/e-rozgaar-logo.png'),
-                ),
+                IdentityLogo(),
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.1,
                 ),
@@ -128,28 +127,15 @@ class _LoginScreenState extends State<LoginScreen> {
                         SizedBox(
                           height: MediaQuery.of(context).size.height * 0.05,
                         ),
-                        GestureDetector(
-                          onTap: () => Navigator.push(
+                        ButtonWidget(
+                          height: 0.06,
+                          width: 0.9,
+                          color: const Color(0Xff3FBC46),
+                          title: 'LOGIN',
+                          onClick: () => Navigator.push(
                             context,
                             MaterialPageRoute(
                               builder: (context) => HomeFeedScreen(),
-                            ),
-                          ),
-                          child: Container(
-                            height: MediaQuery.of(context).size.height * 0.06,
-                            width: MediaQuery.of(context).size.width * 0.9,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(25),
-                              color: Color(0Xff3FBC46),
-                            ),
-                            child: Center(
-                              child: Text(
-                                'LOGIN',
-                                style: TextStyle(
-                                    fontSize: 16,
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold),
-                              ),
                             ),
                           ),
                         ),
