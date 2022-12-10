@@ -2,6 +2,7 @@ import 'package:erozgaar/components/courses.dart';
 import 'package:erozgaar/screens/courses_screen.dart';
 import 'package:flutter/material.dart';
 
+import '../components/design.dart';
 import '../components/identity.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -50,10 +51,10 @@ class _HomeScreenState extends State<HomeScreen> {
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(25),
                       ),
-                      height: MediaQuery.of(context).size.width * 0.13,
+                      height: MediaQuery.of(context).size.height * 0.06,
                       width: MediaQuery.of(context).size.width,
                       child: Padding(
-                        padding: EdgeInsets.all(2.8),
+                        padding: EdgeInsets.all(3.5),
                         child: TextFormField(
                           decoration: InputDecoration(
                               prefixIcon: Icon(
@@ -112,64 +113,53 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
               ),
-              Container(
-                height: MediaQuery.of(context).size.height * 0.347,
-                width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(40),
-                    topLeft: Radius.circular(40),
-                  ),
-                ),
-                child: Padding(
-                  padding: EdgeInsets.only(top: 30, right: 12, left: 12),
-                  child: Column(
-                    children: [
-                      Text(
-                        'Admission Process',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20,
-                            color: Color(0Xff3FBC46)),
-                      ),
-                      SizedBox(
-                          height: MediaQuery.of(context).size.height * 0.03),
-                      Image.asset('assets/images/admission.png'),
-                      SizedBox(
-                          height: MediaQuery.of(context).size.height * 0.03),
-                      GestureDetector(
-                        onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context)=> CourseScreen())),
-                        child: Container(
-                          height: MediaQuery.of(context).size.height * 0.05,
-                          width: MediaQuery.of(context).size.width * 0.35,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(25),
-                            color: const Color(0Xffc73236),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.grey.withOpacity(0.5),
-                                spreadRadius: 1,
-                                blurRadius: 5,
-                                offset: const Offset(0, 2),
-                              ),
-                              // changes position of shadow
-                            ],
-                          ),
-                          child: Center(
-                            child: Text(
-                              'Apply Now',
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold),
+              BottomSheetWidget(height: 0.347,child: Padding(
+                padding: EdgeInsets.only(top: 30, right: 12, left: 12),
+                child: Column(
+                  children: [
+                    Text(
+                      'Admission Process',
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                          color: Color(0Xff3FBC46)),
+                    ),
+                    SizedBox(
+                        height: MediaQuery.of(context).size.height * 0.03),
+                    Image.asset('assets/images/admission.png'),
+                    SizedBox(
+                        height: MediaQuery.of(context).size.height * 0.03),
+                    GestureDetector(
+                      onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context)=> CourseScreen())),
+                      child: Container(
+                        height: MediaQuery.of(context).size.height * 0.05,
+                        width: MediaQuery.of(context).size.width * 0.35,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(25),
+                          color: const Color(0Xffc73236),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.5),
+                              spreadRadius: 1,
+                              blurRadius: 5,
+                              offset: const Offset(0, 2),
                             ),
+                            // changes position of shadow
+                          ],
+                        ),
+                        child: Center(
+                          child: Text(
+                            'Apply Now',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold),
                           ),
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
-              ),
+              ),),
             ],
           ),
         ),
