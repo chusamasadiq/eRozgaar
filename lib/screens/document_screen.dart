@@ -1,6 +1,7 @@
+import 'package:erozgaar/components/design.dart';
 import 'package:flutter/material.dart';
-
 import '../components/identity.dart';
+import '../components/outlinebutton.dart';
 
 class DocumentScreen extends StatefulWidget {
   const DocumentScreen({Key? key}) : super(key: key);
@@ -17,7 +18,6 @@ class _DocumentScreenState extends State<DocumentScreen> {
       body: SingleChildScrollView(
         child: SafeArea(
           child: Column(
-            // mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.034,
@@ -26,16 +26,8 @@ class _DocumentScreenState extends State<DocumentScreen> {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.1,
               ),
-              Container(
-                height: MediaQuery.of(context).size.height * 0.678,
-                width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(40),
-                    topLeft: Radius.circular(40),
-                  ),
-                ),
+              BottomSheetWidget(
+                height: 0.678,
                 child: Padding(
                   padding: EdgeInsets.fromLTRB(20, 30, 20, 0),
                   child: Column(
@@ -70,50 +62,23 @@ class _DocumentScreenState extends State<DocumentScreen> {
                       SizedBox(
                         height: MediaQuery.of(context).size.height * 0.02,
                       ),
-                      OutlinedButton(
-                        style: OutlinedButton.styleFrom(
-                          foregroundColor: Colors.black,
-                        ),
-                        onPressed: () => print('Usama'),
-                        child: Row(
-                          children: const [
-                            Icon(Icons.upload_rounded),
-                            SizedBox(width: 5),
-                            Text('Upload Original CNIC (Front Side)')
-                          ],
-                        ),
+                      OutlineButton(
+                        title: 'Upload Original CNIC (Front Side)',
+                        onClick: () => print('hi'),
                       ),
                       SizedBox(
                         height: MediaQuery.of(context).size.height * 0.02,
                       ),
-                      OutlinedButton(
-                        style: OutlinedButton.styleFrom(
-                          foregroundColor: Colors.black,
-                        ),
-                        onPressed: () => print('Usama'),
-                        child: Row(
-                          children: const [
-                            Icon(Icons.upload_rounded),
-                            SizedBox(width: 5),
-                            Text('Upload Original CNIC (Back Side)')
-                          ],
-                        ),
+                      OutlineButton(
+                        title: 'Upload Original CNIC (Back Side)',
+                        onClick: () => print('hi'),
                       ),
                       SizedBox(
                         height: MediaQuery.of(context).size.height * 0.02,
                       ),
-                      OutlinedButton(
-                        style: OutlinedButton.styleFrom(
-                          foregroundColor: Colors.black,
-                        ),
-                        onPressed: () => print('Usama'),
-                        child: Row(
-                          children: const [
-                            Icon(Icons.upload_rounded),
-                            SizedBox(width: 5),
-                            Text('Upload Recent Degree/Certificate')
-                          ],
-                        ),
+                      OutlineButton(
+                        title: 'Upload Recent Degree/Certificate',
+                        onClick: () => print('hi'),
                       ),
                       SizedBox(
                         height: MediaQuery.of(context).size.height * 0.02,
@@ -121,18 +86,16 @@ class _DocumentScreenState extends State<DocumentScreen> {
                       Container(
                         width: MediaQuery.of(context).size.width * 0.36,
                         child: ElevatedButton(
-                          onPressed: () => 'Null',
-                          style: ButtonStyle(
-                              backgroundColor:
-                                  MaterialStateProperty.all(Color(0Xff3FBC46))),
-                          child: Text('Save')
-
-                        ),
+                            onPressed: () => 'Null',
+                            style: ButtonStyle(
+                                backgroundColor: MaterialStateProperty.all(
+                                    Color(0Xff3FBC46))),
+                            child: Text('Save')),
                       ),
                     ],
                   ),
                 ),
-              ),
+              )
             ],
           ),
         ),
