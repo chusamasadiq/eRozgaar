@@ -94,7 +94,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           height: 0.06,
                           width: 0.9,
                           color: const Color(0Xff3FBC46),
-                          title: 'LOGIN',
+                          title: 'Create an Account',
                           onClick: () => Navigator.push(
                             context,
                             MaterialPageRoute(
