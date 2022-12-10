@@ -1,6 +1,7 @@
 import 'package:erozgaar/screens/login_screen.dart';
 import 'package:erozgaar/screens/signup_screen.dart';
 import 'package:flutter/material.dart';
+import '../components/button.dart';
 
 class StartScreen extends StatefulWidget {
   const StartScreen({Key? key}) : super(key: key);
@@ -21,12 +22,12 @@ class _StartScreenState extends State<StartScreen> {
             children: [
               Image(
                 height: MediaQuery.of(context).size.height * 0.08,
-                image: AssetImage('assets/images/e-rozgaar-logo.png'),
+                image: const AssetImage('assets/images/e-rozgaar-logo.png'),
               ),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.15,
               ),
-              Text(
+              const Text(
                 'Welcome to e-Rozgaar',
                 textAlign: TextAlign.center,
                 style: TextStyle(
@@ -38,7 +39,7 @@ class _StartScreenState extends State<StartScreen> {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.02,
               ),
-              Text(
+              const Text(
                 'Online & Onsite Learning Platform',
                 textAlign: TextAlign.center,
                 style: TextStyle(
@@ -50,31 +51,41 @@ class _StartScreenState extends State<StartScreen> {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.15,
               ),
-              GestureDetector(
-                onTap: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const LoginScreen(),
+
+              //Login
+              ButtonWidget(
+                height: 0.06,
+                width: 0.9,
+                color: const Color(0Xff3FBC46),
+                title: 'LOGIN',
+               onClick: () => Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginScreen())),
                   ),
-                ),
-                child: Container(
-                  height: MediaQuery.of(context).size.height * 0.06,
-                  width: MediaQuery.of(context).size.width * 0.9,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(25),
-                    color: const Color(0Xff3FBC46),
-                  ),
-                  child: Center(
-                    child: Text(
-                      'LOGIN',
-                      style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white),
-                    ),
-                  ),
-                ),
-              ),
+
+              // GestureDetector(
+              //   onTap: () => Navigator.push(
+              //     context,
+              //     MaterialPageRoute(
+              //       builder: (context) => const LoginScreen(),
+              //     ),
+              //   ),
+              //   child: Container(
+              //     height: MediaQuery.of(context).size.height * 0.06,
+              //     width: MediaQuery.of(context).size.width * 0.9,
+              //     decoration: BoxDecoration(
+              //       borderRadius: BorderRadius.circular(25),
+              //       color: const Color(0Xff3FBC46),
+              //     ),
+              //     child: Center(
+              //       child: Text(
+              //         'LOGIN',
+              //         style: TextStyle(
+              //             fontSize: 16,
+              //             fontWeight: FontWeight.bold,
+              //             color: Colors.white),
+              //       ),
+              //     ),
+              //   ),
+              // ),
               SizedBox(height: MediaQuery.of(context).size.height * 0.04),
               Container(
                 height: MediaQuery.of(context).size.height * 0.06,
